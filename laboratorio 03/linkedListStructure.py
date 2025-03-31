@@ -27,67 +27,67 @@ class LinkedList:
     def listLength(self): #Get the length of the linked list (LL)
         """Traverses the list and counts the number of nodes"""
         current = self.head #The initial value is the head's data
-        count = 0 #
+        count = 0 #The initial value of the counter
         
-        while current != None:
-            count = count + 1
-            current = current.getNext()
+        while current != None: #The loop will end when finds the last node (the pointer indicates None)
+            count = count + 1 #The counter will add one for each iteration
+            current = current.getNext() #The current node will be replaced by the next one
         
-        return count
+        return count #Return the counter of the length of the list
     
-    def insertAtBeginning(self, data):
+    def insertAtBeginning(self, data): #Insert a new node at the beginnig (it's gonna be the new head)
         """Inserts a new node at the beginning of the list"""
-        newNode = Node(data)
+        newNode = Node(data) #Creating a node and giving it a value
         
-        if self.length == 0:
+        if self.length == 0: #If the list is empty, the new value will take the place of the head
             self.head = newNode
         else:
-            newNode.setNext(self.head)
-            self.head = newNode
+            newNode.setNext(self.head) #The next node of the new node is the head
+            self.head = newNode #The new head is the new node
         
-        self.length += 1
+        self.length += 1 #The length will be updated
         return True
     
-    def insertAtEnd(self, data):
+    def insertAtEnd(self, data): # Insert a new node at the end of the list
         """Inserts a new node at the end of the list"""
-        newNode = Node(data)
+        newNode = Node(data) # Creating a new node and giving it a value
         
-        if self.length == 0:
+        if self.length == 0: # If the list is empty, the new value will take the place of the head
             self.head = newNode
-            self.length += 1
+            self.length += 1 # The length will be updated
             return True
             
-        current = self.head
+        current = self.head # The first node of the list (head)
         
-        while current.getNext() != None:
-            current = current.getNext()
+        while current.getNext() != None: # The loop will stop when finds the last node (the pointer indicates None)
+            current = current.getNext() # The current node will be replaced by the next one
         
-        current.setNext(newNode)
-        self.length += 1
+        current.setNext(newNode) # The value that follows the end node will be the new node
+        self.length += 1 # The length will be updated
         return True
     
-    def insertAtPos(self, pos, data):
+    def insertAtPos(self, pos, data): # Insert a new node at a defined position
         """Inserts a new node at the specified position"""
-        if pos > self.length or pos < 0:
+        if pos > self.length or pos < 0: # It will do nothing if the position parameter is greater than the length of the list
             return False
         
-        if pos == 0:
+        if pos == 0: # If the position is 0 then it will call the function "insertAtBeginning(data)"
             return self.insertAtBeginning(data)
         
-        if pos == self.length:
+        if pos == self.length: # If the position is equal to the length of the list then it will call the function "insertAtEnd(data)"
             return self.insertAtEnd(data)
         
-        newNode = Node(data)
-        count = 0
-        current = self.head
+        newNode = Node(data) # Creating a new node
+        count = 0 # Initialize the counter in 0
+        current = self.head # The current node is the head
         
-        while count < pos - 1:
-            count += 1
-            current = current.getNext()
+        while count < pos - 1: # While the counter is less than position - 1
+            count += 1 # The counter will add one for each iteration
+            current = current.getNext() # The current node will be replaced by the next one
         
-        newNode.setNext(current.getNext())
-        current.setNext(newNode)
-        self.length += 1
+        newNode.setNext(current.getNext()) # The next node of the new node is the node before the position indicated
+        current.setNext(newNode) # The new node it's gonna be the next of the node before the position indicated
+        self.length += 1 # The length will be updated
         return True
     
     def deleteFromBeginning(self):
@@ -99,7 +99,7 @@ class LinkedList:
         data = temp.getData()
         self.head = temp.getNext()
         temp = None
-        self.length -= 1
+        self.length -= 1 #The length will be updated
         return data
     
     def deleteFromEnd(self):
@@ -121,7 +121,7 @@ class LinkedList:
         
         data = current.getNext().getData()
         current.setNext(None)
-        self.length -= 1
+        self.length -= 1 #The length will be updated
         return data
     
     def deleteFromPos(self, pos):
@@ -146,7 +146,7 @@ class LinkedList:
         data = temp.getData()
         current.setNext(temp.getNext())
         temp = None
-        self.length -= 1
+        self.length -= 1 #The length will be updated
         return data
     
     def clear(self):
