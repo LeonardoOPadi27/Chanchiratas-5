@@ -96,11 +96,10 @@ class LinkedList:
             return None
         
         temp = self.head
-        data = temp.getData()
         self.head = temp.getNext()
         temp = None
         self.length -= 1 #The length will be updated
-        return data
+        return True
     
     def deleteFromEnd(self):
         """Deletes the last node from the list"""
@@ -108,10 +107,9 @@ class LinkedList:
             return None
         
         if self.length == 1:
-            data = self.head.getData()
             self.head = None
             self.length = 0
-            return data
+            return True
         
         current = self.head
         
@@ -119,10 +117,9 @@ class LinkedList:
         while current.getNext().getNext() != None:
             current = current.getNext()
         
-        data = current.getNext().getData()
         current.setNext(None)
         self.length -= 1 #The length will be updated
-        return data
+        return True
     
     def deleteFromPos(self, pos):
         """Deletes a node from the specified position"""
@@ -201,83 +198,3 @@ class LinkedList:
             current = current.getNext()
         
         return result + "None"
-
-# Test cases
-def test_cases():
-    print("===== SINGLY LINKED LIST TESTS =====\n")
-    
-    # Create an empty linked list
-    print("Creating linked list...")
-    my_list = LinkedList()
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-    
-    # Insert at the beginning
-    print("Inserting elements at the beginning...")
-    my_list.insertAtBeginning(5)
-    my_list.insertAtBeginning(10)
-    my_list.insertAtBeginning(15)
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-    
-    # Insert at the end
-    print("Inserting elements at the end...")
-    my_list.insertAtEnd(20)
-    my_list.insertAtEnd(25)
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-    
-    # Insert at specific position
-    print("Inserting elements at specific positions...")
-    my_list.insertAtPos(2, 30)
-    my_list.insertAtPos(4, 35)
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-    
-    # Search for elements
-    print("Searching for elements...")
-    print(f"Position of 30: {my_list.search(30)}")
-    print(f"Position of 100: {my_list.search(100)}\n")
-    
-    # Find nth element from the end
-    print("Finding elements from the end...")
-    print(f"2nd element from the end: {my_list.getNthFromEnd(2)}")
-    print(f"4th element from the end: {my_list.getNthFromEnd(4)}\n")
-    
-    # Delete from the beginning
-    print("Deleting elements from the beginning...")
-    deleted = my_list.deleteFromBeginning()
-    print(f"Deleted element: {deleted}")
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-    
-    # Delete from the end
-    print("Deleting elements from the end...")
-    deleted = my_list.deleteFromEnd()
-    print(f"Deleted element: {deleted}")
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-    
-    # Delete from specific position
-    print("Deleting elements from specific positions...")
-    deleted = my_list.deleteFromPos(2)
-    print(f"Element deleted from position 2: {deleted}")
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-    
-    # Clear the list
-    print("Clearing the list...")
-    my_list.clear()
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-
-    # Verify operations after clearing
-    print("Inserting new elements after clearing...")
-    my_list.insertAtBeginning(100)
-    my_list.insertAtEnd(200)
-    my_list.insertAtPos(1, 150)
-    print(f"List: {my_list.display()}")
-    print(f"Length: {my_list.listLength()}\n")
-
-if __name__ == "__main__":
-    test_cases()
