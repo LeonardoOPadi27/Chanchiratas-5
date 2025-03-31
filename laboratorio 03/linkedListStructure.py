@@ -2,32 +2,32 @@
 
 class Node:
     """Class representing a node in the linked list"""
-    def __init__(self, data=None):
+    def __init__(self, data=None): #Node's Constructor
         self.data = data
         self.next = None
     
-    def getData(self):
+    def getData(self): #Get data of the node
         return self.data
     
-    def setData(self, data):
+    def setData(self, data): #Define the data value
         self.data = data
     
-    def getNext(self):
+    def getNext(self): #Get the next node
         return self.next
     
-    def setNext(self, next_node):
+    def setNext(self, next_node): #Set the next node's data
         self.next = next_node
 
 class LinkedList:
     """Class implementing a singly linked list"""
-    def __init__(self):
+    def __init__(self): #Linked list's constructor
         self.head = None
         self.length = 0
     
-    def listLength(self):
+    def listLength(self): #Get the length of the linked list (LL)
         """Traverses the list and counts the number of nodes"""
-        current = self.head
-        count = 0
+        current = self.head #The initial value is the head's data
+        count = 0 #
         
         while current != None:
             count = count + 1
