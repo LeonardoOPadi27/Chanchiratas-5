@@ -30,6 +30,9 @@ https://github.com/AldyJn/Chanchiratas-5
 
 ``` bash
 git config --global user.name "Tu Nombre"
+```
+
+```bash
 git config --global user.email "tuCorreoTecsup"
 ```
 
@@ -69,7 +72,13 @@ Guía para que hagan un commit para que se actualice el repositorio original que
 
 ```bash
 git add .
+```
+
+```bash
 git commit -m"Aquí escriben una descripción de lo que hicieron"
+```
+
+```bash
 git push
 ```
 
