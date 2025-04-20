@@ -1,10 +1,4 @@
-# Indice
-
-[^1]: Como clonar el repositorio.
-[^2]: Como hacer un commit.
-[^3]: Como sincronizarte con el repositorio principal.
-
-# Como clonar el repositorio [^1]
+# Como clonar el repositorio
 
 Pequeño tutorial para los integrantes del equipo "Chanchiratas 5" :P
 
@@ -56,7 +50,7 @@ https://github.com/ [Tu nombre de usuario de Github] /Chanchiratas-5
 git clone "pega el link de tu rama"
 ```
 
-# Hacer un commit [^2]
+# Hacer un commit
 
 Guía para que hagan un commit para que se actualice el repositorio original que será lo que realmente va a observar el profesor ya que será el link que se va a usar.
 
@@ -86,7 +80,7 @@ git push
 
 6- Despues, dale click al botón Pull Requests -> New Pull Request
 
-# Sincronizarte con el repositorio [^3]
+# Sincronizarte con el repositorio
 
 A continuación, una guía de como sincronizar tu rama clonada en tu PC/Laptop.
 
