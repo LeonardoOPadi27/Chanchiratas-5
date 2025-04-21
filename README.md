@@ -101,6 +101,7 @@ git merge fuentes/main main
 ## Estructura para los ejercicios
 
 Cada integrante del grupo debe seleccionar un ejercicio diferente y desarrollarlo con la siguiente estructura:
+
     Nombre del alumno
     Ejercicio a desarrollar
     Prompt engineering (Si aplica)
