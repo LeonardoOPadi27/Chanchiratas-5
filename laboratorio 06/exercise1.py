@@ -43,13 +43,13 @@ class CircularDeque:
         return self.queue[self.rear]
 
     def get_items(self):
-        # Devuelve los elementos en orden
         items = []
         idx = self.front
         for _ in range(self.size):
             items.append(self.queue[idx])
             idx = (idx + 1) % self.capacity
         return items
+
 
 def sliding_window_max(nums, k):
     n = len(nums)
@@ -76,7 +76,24 @@ def sliding_window_max(nums, k):
             result.append(nums[deque.peek_front()])
 
     return result
+
+
+# Caso base: ejemplo original
 nums = [1, 3, -1, -3, 5, 3, 6, 7]
 k = 3
-print(sliding_window_max(nums, k))
-# Salida esperada: [3, 3, 5, 5, 6, 7]
+print("Caso base:", sliding_window_max(nums, k))  # ➤ [3, 3, 5, 5, 6, 7]
+
+# Caso 1: Monitoreo de temperatura
+temps = [20, 21, 19, 18, 22, 23, 21, 20, 24, 25, 22]
+k1 = 5
+print("Temperaturas:", sliding_window_max(temps, k1))  # ➤ [22, 23, 23, 23, 24, 25, 25]
+
+# Caso 2: Análisis de uso de CPU
+cpu_usage = [35, 40, 38, 45, 42, 48, 50, 47, 46, 49]
+k2 = 3
+print("CPU usage:", sliding_window_max(cpu_usage, k2))  # ➤ [40, 45, 45, 48, 50, 50, 50, 49]
+
+# Caso 3: Control de calidad
+quality_scores = [5, 7, 6, 3, 8, 9, 4, 6]
+k3 = 4
+print("Calidad productos:", sliding_window_max(quality_scores, k3))  # ➤ [7, 8, 9, 9, 9
