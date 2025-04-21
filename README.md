@@ -104,3 +104,27 @@ git merge fuentes/main main
 git fetch fuentes
 git merge fuentes/main main
 ```
+## Estructura para los ejercicios
+
+Cada integrante del grupo debe seleccionar un ejercicio diferente y desarrollarlo con la siguiente estructura:
+    Nombre del alumno
+    Ejercicio a desarrollar
+    Prompt engineering (Si aplica)
+    Prompt ingresado y/o captura
+    Análisis del prompt
+    Ajustes del prompt y/o captura
+    Comentarios de los compañeros
+
+    Código (Si aplica)
+    Código desarrollado
+    Análisis del código
+    Captura de la ejecución del código
+    Comentarios de los compañeros
+
+    Ejercicios (Si aplica)
+    Explicar cómo funciona el algoritmo
+    Hacer su diagrama de cómo se ejecuta.
+    Comentarios del problema
+    Hacer 3 casos de prueba
+
+Desarrollar todo el código en inglés
