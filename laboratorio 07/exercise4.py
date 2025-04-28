@@ -6,7 +6,7 @@ class TreeNode:
 
 # Función que realiza el recorrido por niveles (nivel por nivel, de izquierda a derecha)
 def level_order_traversal(root):
-    if not root:
+    if root is None:
         return []  # Si el árbol está vacío, devolvemos una lista vacía
     
     result = []    # Lista para guardar los valores de los nodos visitados
