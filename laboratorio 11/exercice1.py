@@ -34,3 +34,8 @@ def range_query(root, min_val, max_val):
 
     inorder(root)
     return result
+print(range_query(build_bst([7, 3, 11, 1, 5, 9, 13]), 5, 10) == [5, 7, 9])        # Test 1
+print(range_query(build_bst([6, 4, 8, 2]), 1, 10) == [2, 4, 6, 8])                # Test 2
+print(range_query(build_bst([20, 10, 30]), 1, 5) == [])                           # Test 3
+print(range_query(build_bst([15]), 10, 20) == [15])                               # Test 4
+print(range_query(build_bst([15, 10, 20, 5, 25]), 10, 20) == [10, 15, 20])        # Test 5

@@ -43,3 +43,34 @@ def bst_to_dll(root):
     first.left = last
     last.right = first
     return first
+# Utilidad para validar la lista doble circular
+def validate_circular_dll(head, expected_values):
+    if not head and not expected_values:
+        return True
+    result = []
+    curr = head
+    for _ in range(len(expected_values)):
+        result.append(curr.val)
+        curr = curr.right
+    return result == expected_values and curr == head
+
+print(validate_circular_dll(bst_to_dll(build_bst([2, 1, 3])), [1, 2, 3]) == True)   # Test 1
+print(validate_circular_dll(bst_to_dll(build_bst([4, 2, 6, 1, 3, 5, 7])), [1, 2, 3, 4, 5, 6, 7]) == True)  # Test 2
+print(validate_circular_dll(bst_to_dll(build_bst([5])), [5]) == True)              # Test 3
+
+# Árbol degenerado tipo lista: 1 -> 2 -> 3 -> 4
+def build_degenerate_bst(values):
+    root = None
+    current = None
+    for val in values:
+        node = TreeNode(val)
+        if not root:
+            root = node
+            current = node
+        else:
+            current.right = node
+            current = node
+    return root
+
+print(validate_circular_dll(bst_to_dll(build_degenerate_bst([1, 2, 3, 4])), [1, 2, 3, 4]) == True)  # Test 4
+print(bst_to_dll(None) is None)                                                # Test 5

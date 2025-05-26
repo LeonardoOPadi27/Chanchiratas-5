@@ -36,3 +36,8 @@ def kth_smallest(root, k):
 
     inorder(root)
     return result
+print(kth_smallest(build_bst([3, 1, 4, 2]), 2) == 2)                 # Test 1
+print(kth_smallest(build_bst([5, 3, 7, 2, 4, 6, 8]), 1) == 2)        # Test 2
+print(kth_smallest(build_bst([5, 3, 7, 2, 4, 6, 8]), 7) == 8)        # Test 3
+print(kth_smallest(build_bst([4, 2, 6, 1, 3, 5, 7]), 4) == 4)        # Test 4
+print(kth_smallest(build_bst([10]), 1) == 10)                       # Test 5
