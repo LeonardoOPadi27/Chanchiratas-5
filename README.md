@@ -1,10 +1,4 @@
-# Indice
-
-[^1]: Como clonar el repositorio.
-[^2]: Como hacer un commit.
-[^3]: Como sincronizarte con el repositorio principal.
-
-# Como clonar el repositorio [^1]
+# Como clonar el repositorio
 
 Pequeño tutorial para los integrantes del equipo "Chanchiratas 5" :P
 
@@ -56,7 +50,7 @@ https://github.com/ [Tu nombre de usuario de Github] /Chanchiratas-5
 git clone "pega el link de tu rama"
 ```
 
-# Hacer un commit [^2]
+# Hacer un commit
 
 Guía para que hagan un commit para que se actualice el repositorio original que será lo que realmente va a observar el profesor ya que será el link que se va a usar.
 
@@ -86,7 +80,7 @@ git push
 
 6- Despues, dale click al botón Pull Requests -> New Pull Request
 
-# Sincronizarte con el repositorio [^3]
+# Sincronizarte con el repositorio
 
 A continuación, una guía de como sincronizar tu rama clonada en tu PC/Laptop.
 
@@ -104,3 +98,28 @@ git merge fuentes/main main
 git fetch fuentes
 git merge fuentes/main main
 ```
+## Estructura para los ejercicios
+
+Cada integrante del grupo debe seleccionar un ejercicio diferente y desarrollarlo con la siguiente estructura:
+
+    Nombre del alumno
+    Ejercicio a desarrollar
+    Prompt engineering (Si aplica)
+    Prompt ingresado y/o captura
+    Análisis del prompt
+    Ajustes del prompt y/o captura
+    Comentarios de los compañeros
+
+    Código (Si aplica)
+    Código desarrollado
+    Análisis del código
+    Captura de la ejecución del código
+    Comentarios de los compañeros
+
+    Ejercicios (Si aplica)
+    Explicar cómo funciona el algoritmo
+    Hacer su diagrama de cómo se ejecuta.
+    Comentarios del problema
+    Hacer 3 casos de prueba
+
+Desarrollar todo el código en inglés
